@@ -14,6 +14,16 @@ The CSS Box Model, consists of five core parts which we’ll cover:
 
 <figure><img src=".gitbook/assets/box_model.png" alt=""><figcaption><p>Box Model</p></figcaption></figure>
 
+**Every block-level HTML element you put on a webpage is a box**. Even if it doesn't ordinarily look like it. For example, if you add a `<h1>` element to your webpage and load it, it initially looks like it's just loose text. If you add some CSS colors, though, you can see the rectangle box shape**:**
+
+````html
+```html
+<h1>Nisarg</h1>
+```
+````
+
+<figure><img src=".gitbook/assets/Box_model_own.png" alt=""><figcaption><p>Example of Box Model</p></figcaption></figure>
+
 The Box model defines the different parts of the rectangle above, which are broken up into four(4) pieces, sub-boxes or layers.
 
 1. The innermost rectangle is the **content box**. The width and height of this depend on the element’s content (text, images, videos, and any child elements ).
@@ -21,10 +31,38 @@ The Box model defines the different parts of the rectangle above, which are brok
 3. Next, the **border box** (defined by the border property). If there is no border width defined, the border edge is equal to the padding edge.
 4. The outermost rectangle is the **margin box**. If there is no margin width defined, the margin edge is equal to the border edge.
 
-**Every block-level HTML element you put on a webpage is a box**. Even if it doesn't ordinarily look like it. For example, if you add a `<p>` element to your webpage and load it, it initially looks like it's just loose text. If you add some CSS colors, though, you can see the rectangle box shape**:**
+Not all boxes are treated the same in CSS. There’s a difference between "block boxes" and "inline boxes".
 
-```html
+#### Block boxes
+
+We already know some ”block boxes” or “block elements”: headlines and paragraphs, navs, headers, and footers. When you add a block element to your page, it starts in its own new line and fills all the available horizontal space.
+
+Each block element sits below the previous block element. Elements are _stacked_ in block direction—by default, that’s from top to bottom. (We can change the default block direction, but this isn’t something we’re going to discuss today…)
+
+#### Inline boxes
+
+“Inline boxes” or “inline elements” sit next to each other in one line. Links, images, and labels are examples for inline elements. When you write text and there are parts you want to highlight with a `strong` tag, the text continues in the same line (but the meaning and styling of the content between the opening and closing tags changes)—this is because the `strong` element is an inline element and thus does not cause a line break.
+
+An inline box grows depending on its content. It gets large enough to fit all its content inside.
+
+## CSS Model with Example
+
+The reason we are talking about block and inline boxes (or elements) separately is that changing their padding, border, or margin properties behaves differently. Let’s have a look at these elements in the browser’s developer tools.
+
 ```
+// Some code
+
+```
+
+In the screenshot below (I’m using Chrome) you can see the box of the first `h1` headline: the blue area is the element’s **content** and the yellow areas above and below are the top and bottom **margins**. We can also name them `margin-block-start` and `margin-block-end` as our block direction goes from top to bottom.
+
+<figure><img src=".gitbook/assets/1.Box_Model_Example (1).png" alt=""><figcaption><p>Preview of H1 as Box Model</p></figcaption></figure>
+
+Concerning our h1 and the **Margin** we notice it's 32 pixels actually 32.16 pixels and **we didn't set that so that's a default style on the h1.**
+
+<figure><img src=".gitbook/assets/2.Box_model_example_h1_pixel (1).png" alt=""><figcaption><p>H1 Default Browser Style</p></figcaption></figure>
+
+Here are the default styles from the browser this is a **user agent stylesheet** that's **assigned by the browser** and here you can see they assigned some margin settings here it's 0.67em so that's essentially two-thirds now. If I remember about our units an em responds to the font size of the element and we set a font size of 3rem which would essentially be 48 pixels so 5:45 two-thirds of that is coming in right 5:47 around where we see it on our box model 5:49 here at 5:51 pixels so now that we know our font size 5:54 is impacting the default margin
 
 ### Content and sizing <a href="#content_and_sizing" id="content_and_sizing"></a>
 
