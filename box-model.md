@@ -62,7 +62,7 @@ Concerning our h1 and the **Margin** we notice it's 32 pixels actually 32.16 pix
 
 <figure><img src=".gitbook/assets/2.Box_model_example_h1_pixel (1).png" alt=""><figcaption><p>H1 Default Browser Style</p></figcaption></figure>
 
-Here are the default styles from the browser this is a **user agent stylesheet** that's **assigned by the browser** and here you can see they assigned some margin settings here it's 0.67em so that's essentially two-thirds now. If I remember about our units an em responds to the font size of the element and we set a font size of 3rem which would essentially be 48 pixels so 5:45 two-thirds of that is coming in right 5:47 around where we see it on our box model 5:49 here at 5:51 pixels so now that we know our font size 5:54 is impacting the default margin
+Here are the default styles from the browser this is a **user agent stylesheet** that's **assigned by the browser** and here you can see they assigned some margin settings here it's 0.67em so that's essentially two-thirds now. If I remember about our units an em responds to the font size of the element and we set a font size of 3rem which would essentially be 48 pixels so two-thirds of that is coming in right around where we see it on our box model here at pixels so now that we know our font size is impacting the default margin
 
 ### Content and sizing <a href="#content_and_sizing" id="content_and_sizing"></a>
 
